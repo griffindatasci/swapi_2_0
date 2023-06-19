@@ -1,0 +1,26 @@
+[0m20:00:36.180439 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E135C35BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E135969E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1359FE3D0>]}
+
+
+============================== 20:00:36.185436 | ff6d224a-1ae1-4979-afcf-0e24c7255f93 ==============================
+[0m20:00:36.185436 [info ] [MainThread]: Running with dbt=1.5.1
+[0m20:00:36.187024 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Griff-Kauff\\.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m20:00:36.190025 [debug] [MainThread]: Starter project path: C:\Users\Griff-Kauff\Dropbox\rob_new\griffindatasci\github\swapi_2_0\swapi_2_0_venv\Lib\site-packages\dbt\include\starter_project
+[0m20:00:38.019616 [info ] [MainThread]: 
+Your new dbt project "swapi_2_0_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m20:00:38.020631 [debug] [MainThread]: Command `dbt init` succeeded at 20:00:38.020631 after 1.88 seconds
+[0m20:00:38.021615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E135D0C150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E135C2BCD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E135969650>]}
+[0m20:00:38.022613 [debug] [MainThread]: Flushing usage events
