@@ -22,23 +22,14 @@
     1. Select postgres
 1. Edit profiles.yml:
     1. Go to C://Users//<computer_user>//.dbt in file explorer and open profiles.yml
-    1. Edit the <dbt_project_name> section to:
-```
-<dbt_project_name>:
-  outputs:
-
-    dev:
-      type: postgres
-      threads: 4
-      host: localhost
-      port: 5432
-      user: postgres
-      pass: <postgres_password>
-      dbname: <database_name>
-      schema: postgres
-
-  target: dev
-```
+    1. Edit the <dbt_project_name> dev section to:
+        - threads: 4
+        - host: localhost
+        - port: 5432
+        - user: <postgres_username>
+        - pass: <postgres_password>
+        - dbname: <database_name>
+        - schema: postgres
 1. Initiate Postgres database
     - In DBT project directory
     1. `psql -U <postgres_username>`
@@ -59,7 +50,7 @@
     1. `dbt debug`
     1. `dbt run`
     1. Open PGAdmin4
-    1. Open PostgreSQL <Version> Server > Databases > <database_name> > Schemas > <postgres_username> > Tables: This should contain my_first_dbt_model table
+    1. Open PostgreSQL <Version> Server > Databases > <database_name> > Schemas > Postgres > Tables: This should contain my_first_dbt_model table
 
 
 ### TODO: Adding data and tables to DBT project
