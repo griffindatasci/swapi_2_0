@@ -1,8 +1,10 @@
+### Initial Setup 
 
 1. Go to github and create repository for project
 1. Clone github repo to local machine:
     1. `cd` to host directory on local machine
     1. `git clone <https://github.com/<git_username>/<repo_name>.git>` 
+    1. `git branch -b <branch_name>` to branch the from main
 1. Create and open readme.md:
     1. `cd` to github directory (directory cloned in previous step)
     1. `cp NUL readme.md`
@@ -21,9 +23,8 @@
 1. Edit profiles.yml:
     1. Go to C://Users//<computer_user>//.dbt in file explorer and open profiles.yml
     1. Edit the <dbt_project_name> section to:
-    
 ```
-swapi_2_0_dbt:
+<dbt_project_name>:
   outputs:
 
     dev:
@@ -38,12 +39,44 @@ swapi_2_0_dbt:
 
   target: dev
 ```
+1. Initiate Postgres database
+    - In DBT project directory
+    1. `psql -U <postgres_username>`
+    1. `CREATE DATABASE <database_name> WITH ENCODING 'UTF8' LC_COLLATE='English_United Kingdom' LC_CTYPE='English_United Kingdom';`
+    1. `\c <database_name>`
+    1. `GRANT TEMP ON DATABASE <database_name> TO <postgres_username>;`
+    1. `GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO <postgres_username>` 
+    1. `GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA public TO <postgres_username>;` 
+    1. `GRANT USAGE ON ALL SEQUENCES IN SCHEMA public TO <postgres_username>;`
+    1. Open Control Panel > System & Security > Administrative Tools > ODBC Data Sources > Add
+    1. Set database to <database_name> and port to *5432*, server to *localhost*, username to <postgres_username> amd password to <postgres_password>
+    1. In advanced options check *Use Declare/Fetch* and *bytea as LO* 
+    1. Click Apply > OK > Save > Test
+    1. Click Test
+    1. `\q` to quit psql
+1. Test DBT
+    - In command prompt, dbt project directory with venv active
+    1. `dbt debug`
+    1. `dbt run`
+    1. Open PGAdmin4
+    1. Open PostgreSQL <Version> Server > Databases > <database_name> > Schemas > <postgres_username> > Tables: This should contain my_first_dbt_model table
+
+
+### TODO: Adding data and tables to DBT project
+
+- Add staging data (with python)
+- Add models (.sql and .yml files)
+- Add sources.yml
 
 ### Variables:
 
 - `git_username`: griffindatasci
 - `repo_name`: swapi_2_0
+- `branch_name`: development
 - `env_name`: swapi_2_0_venv
 - `dbt_project_name`: swapi_2_0_dbt
 - `computer_user`: Griff-Kauff
 - `database_name`: swapi_2_0_dbase
+- `postgres_username`: postgres  
+
+
