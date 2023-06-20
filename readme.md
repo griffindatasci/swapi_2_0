@@ -53,6 +53,7 @@
     1. Open PostgreSQL <Version> Server > Databases > <database_name> > Schemas > Postgres > Tables: This should contain my_first_dbt_model table
 
 
+
 ### TODO: Adding data and tables to DBT project
 
 - Add staging data (with python)
@@ -61,13 +62,13 @@
 
 ### Variables:
 
-- `git_username`: griffindatasci
-- `repo_name`: swapi_2_0
 - `branch_name`: development
-- `env_name`: swapi_2_0_venv
-- `dbt_project_name`: swapi_2_0_dbt
 - `computer_user`: Griff-Kauff
 - `database_name`: swapi_2_0_dbase
+- `dbt_project_name`: swapi_2_0_dbt
+- `env_name`: swapi_2_0_venv
+- `git_username`: griffindatasci
 - `postgres_username`: postgres  
+- `repo_name`: swapi_2_0
 
 
