@@ -1,11 +1,8 @@
 version: 2
 
 sources:
-  - name: swapi_2_0_dbase
+  - name: postgres
     database: swapi_2_0_dbase
     tables:
       - name: stg_films
-#      - name: stg_people
-#      - name: stg_planets
-#      - name: stg_appearances
-#      - name: fct_appearances
+      - name: dim_films

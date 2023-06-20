@@ -54,11 +54,18 @@
 
 
 
-### TODO: Adding data and tables to DBT project
+### Adding data and tables to DBT project
 
-- Add staging data (with python)
-- Add models (.sql and .yml files)
-- Add sources.yml
+- Add python script to scrape and stage data
+- Add <model>.sql for dim/fct tables in models (note: `{{source(<postgres_username>, <source_name>)}}`)
+- Add <model>.yml for each model in models
+- Add sources.yml (name: <postgres_username>, database: <database_name>)
+
+
+### TODO:
+
+- ISSUE: outputting data somewhere, just not arriving in the swapi_2_0_dbase database in PGAdmin4. Will figure this out later - likely a config issue.
+- Add dim_* and fct_* SQL and YAML files
 
 ### Variables:
 
