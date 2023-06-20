@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_films
+    description: "Data of each film in Star Wars from SWAPI"
+    columns:
+      - name: title
+      - name: episode_id
+      - name: opening_crawl
+      - name: director
+      - name: producer
+      - name: release_date
+      - name: url
+      - name: created
+      - name: edited
