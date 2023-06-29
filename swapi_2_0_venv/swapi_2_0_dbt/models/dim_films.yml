@@ -2,10 +2,13 @@ version: 2
 
 models:
   - name: dim_films
-    materialized: table 
+    materialized: view 
     description: "Data of each film in Star Wars from SWAPI"
     columns:
       - name: title
+        tests:
+        - not null
+        - unique
       - name: episode_id
       - name: opening_crawl
       - name: director
