@@ -2,7 +2,9 @@ version: 2
 
 sources:
   - name: postgres
-    database: swapi_2_0_dbase
+    description: "SWAPI database"
+    database: "swapi_2_0_dbase"
+    schema: postgres
     tables:
       - name: stg_films
       - name: dim_films

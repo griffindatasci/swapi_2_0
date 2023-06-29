@@ -1,5 +1,6 @@
 with films as (
-    select title from {{source('postgres', 'stg_films')}}
+    select title, episode_id, opening_crawl, director, producer, release_date, url, created, edited 
+    from {{source('postgres', 'stg_films')}}
 )
 
 select *
